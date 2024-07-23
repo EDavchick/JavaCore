@@ -2,6 +2,22 @@ package lection03;
 
 public class Main {
     public static void main(String[] args) {
+
+        Animal cat1 = new Cat("Barsik", "White", 2021, 1);
+        Cat.swim(cat1); // Cats do not like swim!!!
+        cat1.jump(4); // Barsik jumps 4 times
+        cat1.run(17); // Barsik runs 17 times
+
+        Animal dog1 = new Dog("Stan", "Black", 2012);
+        dog1.jump("grass"); // Stan cannot jump to grass because it is old animal
+        dog1.run(55); // Stan runs 55 times
+
+        Animal snake1 = new Snake("Kaa", "Stripes", 2021);
+        snake1.jump(); // Snake Kaa cannot jump, it is a snaaaaake
+        Snake.run(snake1); // Snake cannot run, it is a snaaaaake
+
+
+
         // создание объекта без конструктора
 //        Cat cat1 = new Cat();
 //        Cat cat2 = new Cat();
@@ -25,7 +41,5 @@ public class Main {
         // создание объекта с конструктором и getter/setter
 //        System.out.println(STR."Cat 1, name: \{cat1.getName()} color: \{cat1.getColor()} age: \{cat1.getAge()}");
 //        System.out.println(STR."Cat 2, name: \{cat2.getName()} color: \{cat2.getColor()} age: \{cat2.getAge()}");
-
-
     }
 }

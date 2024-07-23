@@ -11,20 +11,35 @@ public abstract class Animal {
         this.birthYear = birthYear;
     }
 
+    void swim(int distance){
+        if (this.getBirthYear() < 7) {
+            System.out.println(STR."\{name} runs \{distance} times");
+        }
+        else System.out.println(STR."\{name} cannot run because it is old animal");
+    }
+    void run(int distance) {
+        if (this.getBirthYear() < 7) {
+            System.out.println(STR."\{name} runs \{distance} times");
+        }
+        else System.out.println(STR."\{name} cannot run because it is old animal");
+    }
     void jump() {
-        if (this.getBirthYear() < 5) {
+        if (this.getBirthYear() < 7) {
             System.out.println(STR."\{name} jump");
         }
     }
     void jump(String place) {
-        if (this.getBirthYear() < 5) {
+        if (this.getBirthYear() < 7) {
             System.out.println(STR."\{name} jumps to \{place}");
         }
+        else System.out.println(STR."\{name} cannot jump to \{place} because it is old animal");
     }
+
     void jump(int count) {
-        if (this.getBirthYear() < 5) {
+        if (this.getBirthYear() < 7) {
             System.out.println(STR."\{name} jumps \{count} times");
         }
+        else System.out.println(STR."\{name} cannot jump because it is old animal");
     }
     abstract void voice();
 
@@ -55,4 +70,5 @@ public abstract class Animal {
     public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
     }
+
 }
