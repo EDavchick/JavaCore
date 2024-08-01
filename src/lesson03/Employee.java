@@ -16,7 +16,11 @@ public class Employee /*implements Comparable<Employee>*/ {
         this.salary = salary;
         this.age = age;
     }
-
+    public int compare(Employee o) {
+        if (this.getAge() != o.getAge())
+            return 0;
+        else return 1;
+    }
     public void increaseSalary(int amount) {
         this.salary += amount;
     }
@@ -72,11 +76,6 @@ public class Employee /*implements Comparable<Employee>*/ {
     public String toString() {
         return STR."Employee: firstname: \{firstname}, lastname: \{lastname}, position: \{position}, phone: \{phone}, salary: \{salary}, age: \{age}";
     }
-
-//    public int compare(Employee o) {
-//        if (o.equals())
-//        return this.getAge() - o.getAge();
-//    }
 
 //    @Override
 //    public int compareTo(Employee o) {

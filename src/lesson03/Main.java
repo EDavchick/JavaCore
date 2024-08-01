@@ -37,13 +37,14 @@ public class Main {
         System.out.println();
         increaser(company);
         printEmployees(company);
-//
+        System.out.println();
+        compareEmp(company);
+
 //        System.out.println(averageAge(company));
 //        System.out.println(averageSalary(company));
 
 //        getList(company);
-//        Collections.sort(getList(company));
-//        System.out.println();
+//        System.out.println(company);
     }
 
     private static void printEmployees(Employee[] emp) {
@@ -77,8 +78,17 @@ public class Main {
     }
 
     private static List<Employee> getList(Employee[] emp) {
-        List<Employee> list = new ArrayList<>(Arrays.asList(emp));
-        System.out.println(list);
-        return list;
+        List<Employee> listEmp = new ArrayList<>(Arrays.asList(emp));
+        System.out.println(listEmp);
+        return listEmp;
+    }
+
+    private static void compareEmp(Employee[] emp) {
+//        int temp[] = new int[emp.length];
+        for (int i = 0; i < emp.length - 1; i++) {
+            emp[i].compare(emp[i + 1]);
+//            emp[i] = emp[i + 1];
+            System.out.println(emp[i]);
+        }
     }
 }
